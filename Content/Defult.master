@@ -1,0 +1,73 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Defult.master.cs" Inherits="Defult" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+     <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/css/bootstrap-theme.min.css" rel="stylesheet" />
+    <script src="~/content/js/bootstrap.min.js" ></script>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <nav class="navbar navbar-light navbar-fixed-top" style="background-color: #e3f2fd;">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <asp:Image runat="server" ID="imgLogo" ImageUrl="~/Image/rocky-drawing-hammer-15.png" Height="75px" Width="75px" />
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav"><br />
+       
+        <li><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Home" Font-Bold="true" style="font-size:large">Home</asp:HyperLink></li>
+        <li><asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/ProductList" Font-Bold="true" style="font-size:large">Product</asp:HyperLink></li>
+        <li><asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/EmployeeList" Font-Bold="true" style="font-size:large" Visible="False">Customer</asp:HyperLink></li>
+        <li><asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/SalesList" Font-Bold="true" style="font-size:large" Visible="False">Order</asp:HyperLink></li>
+        <li><asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/AboutUs" Font-Bold="true" style="font-size:large" Visible="true">AboutUs</asp:HyperLink></li>
+        <li><asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/Quality" Font-Bold="true" style="font-size:large" Visible="true">Quality</asp:HyperLink></li>
+        <li><asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="~/Process" Font-Bold="true" style="font-size:large" Visible="true">Process</asp:HyperLink></li> 
+        <li><asp:HyperLink ID="HyperLink8" runat="server" NavigateUrl="~/Infrastructure" Font-Bold="true" style="font-size:large" Visible="true">Infrastructure</asp:HyperLink></li> 
+        <li><asp:HyperLink ID="HyperLink9" runat="server" NavigateUrl="~/ContactUs" Font-Bold="true" style="font-size:large" Visible="true">ContactUs</asp:HyperLink></li> 
+
+      </ul>
+      <ul class="nav navbar-nav navbar-right"><br />
+          <li style="padding-top:14px">
+              <span class="glyphicon glyphicon-user" style="font-size:large"></span><asp:Label runat="server" CssClass="text-primary" Font-Bold="true" style="font-size:large" ID="lblUserName"></asp:Label>
+          </li>
+        <li><asp:LinkButton ID="btnLogout" runat="server"  OnClick="hlLogout_Click" Font-Bold="true" style="font-size:large"><span class="glyphicon glyphicon-log-out" ></span>Logout</asp:LinkButton></li>
+          
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+        <asp:ContentPlaceHolder id="cphContent" runat="server">
+        </asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder id="cphScript" runat="server">
+        </asp:ContentPlaceHolder>
+   
+        <br />
+       
+        
+  
+        <div class="container">
+    <div class="col-md-12" style="text-align:left">
+       <h4 class="align-text-bottom"><b><i>All Rights Reserved | Design by Vasu Chaniyara</i></b></h4>
+    </div>
+    </div>
+    
+   
+    </form>
+</body>
+</html>
+
